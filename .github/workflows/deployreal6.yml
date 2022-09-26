@@ -1,5 +1,5 @@
 
-name: 🚀 Deploy music.real6.ml
+name: 🚀 Deploy 
 on:
   workflow_run:
     workflows: ["生成静态文件"]
@@ -9,7 +9,7 @@ on:
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy 部署到music.real6.ml
+    name: 🎉 Deploy 
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -20,6 +20,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://music.real6.ml
-        ftp-username: music.real6.ml
+        ftp-server: ftp://web.4sig.top
+        ftp-username: web.4sig.top
         ftp-password: ${{ secrets.ftp_password }}
